@@ -5,14 +5,14 @@
 #include <set>
 using namespace std;
 
-// Set of C/C++ keywords
+
 set<string> keywords = {
     "int", "float", "double", "char", "void", "if", "else",
     "for", "while", "return", "switch", "case", "break", "continue",
     "do", "long", "short", "unsigned", "signed", "bool", "const"
 };
 
-// Function to check if a string is a valid identifier
+
 bool isIdentifier(const string& s) {
     regex id("^[A-Za-z_][A-Za-z0-9_]*$");
     return regex_match(s, id);
@@ -25,7 +25,7 @@ int main() {
     int identifierCount = 0;
 
     while (getline(cin, line)) {
-        // Remove punctuation except underscore
+        
         for (char &c : line) {
             if (!isalnum(c) && c != '_') {
                 c = ' ';
