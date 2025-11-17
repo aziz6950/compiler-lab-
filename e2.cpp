@@ -7,7 +7,7 @@ int main() {
     cout << "Enter integer constant: ";
     cin >> s;
 
-    // Optional minus sign + digits
+   
     regex int_regex("^-?[0-9]+$");
 
     if (regex_match(s, int_regex)) {
